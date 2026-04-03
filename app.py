@@ -1,9 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import os
-st.write("Working directory:", os.getcwd())
-st.write("Files here:", os.listdir())
+
 st.set_page_config(
     page_title="Nike Sales Dashboard",
     layout="wide"
@@ -17,7 +15,7 @@ st.image("Logo.png", width=500)
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("cleaned_Data.csv") 
+    df = pd.read_csv("cleaned_data.csv") 
     return df
 
 df = load_data()
